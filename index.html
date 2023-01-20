@@ -1,0 +1,45 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<title>Increment count when button is clicked</title>
+</head>
+
+<body style="text-align: center;">
+	<h1 style="color: green;">
+		GeeksforGeeks
+	</h1>
+
+	<h4>
+		How to count the number of
+		times a button is clicked?
+	</h4>
+
+	<button id="btn">Click Here!</button>
+
+	<p>
+		Button Clicked <span
+		id="display">0</span> Times
+	</p>
+	<p>
+		Time <span
+		id="timedisplay">0:0:0</span> 
+	</p>
+
+	<script type="text/javascript">
+		var count = 0;
+		var btn = document.getElementById("btn");
+		var disp = document.getElementById("display");
+		var timedisp = document.getElementById("timedisplay");
+
+		btn.onclick = function () {
+			var date_now = new Date(); 
+			count++;
+			disp.innerHTML = count;
+			timedisp.innerHTML = date_now.getHours() + ":" + date_now.getMinutes() + ":" + date_now.getSeconds();
+		}
+	</script>
+</body>
+
+</html>
